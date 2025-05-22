@@ -16,18 +16,6 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
-            overflow-x: hidden;
-        }
-
-        /* Esconder qualquer código JavaScript visível */
-        script {
-            display: none !important;
-        }
-        
-        /* Esconder qualquer texto de código que possa vazar */
-        body::before,
-        body::after {
-            display: none !important;
         }
 
         .container {
@@ -407,7 +395,6 @@
             background: #f39c12;
             color: white;
             padding: 20px 30px;
-            border-bottom: 3px solid #e67e22;
             text-align: center;
         }
 
@@ -660,7 +647,6 @@
     </style>
 </head>
 <body>
-    <!-- Início do conteúdo da página -->
     <div class="container">
         <div class="header">
             <h1>🏆 Jogos Escolares de Minas Gerais - JEMG 2025</h1>
@@ -894,55 +880,6 @@
                         <td>Collegium Prisma<br>Montes Claros</td>
                         <td class="placar-cell"><span class="vs">X</span></td>
                         <td><span class="escola-nome">E.E. Jesuzinha Araújo Magalhães<br>São João do Pacuí</span></td>
-                    </tr> Poliesportivo João Bosco">
-                        <td class="data-cell">07/06<br><small>(sábado)</small></td>
-                        <td class="horario">15:00</td>
-                        <td><span class="modalidade ffii">FFII</span></td>
-                        <td><span class="chave">C</span></td>
-                        <td class="local">Ginásio Poliesportivo João Bosco</td>
-                        <td>E.E. de Francisco Dumont<br>Francisco Dumont</td>
-                        <td class="vs">X</td>
-                        <td><span class="escola-nome">E.E. Jesuzinha Araújo Magalhães<br>São João do Pacuí</span></td>
-                    </tr>
-                    <tr data-day="07/06" data-modalidade="FMII" data-local="Quadra Ana Lopes">
-                        <td class="data-cell">07/06<br><small>(sábado)</small></td>
-                        <td class="horario">16:00</td>
-                        <td><span class="modalidade fmii">FMII</span></td>
-                        <td><span class="chave">G</span></td>
-                        <td class="local">Quadra Ana Lopes</td>
-                        <td>E.E. Norte Mineira<br>Capitão Enéas</td>
-                        <td class="vs">X</td>
-                        <td><span class="escola-nome">E.E. Jesuzinha Araújo Magalhães<br>São João do Pacuí (SE VENCER)</span></td>
-                    </tr>
-                    <tr data-day="07/06" data-modalidade="FMI" data-local="E.M. Bolívar de Andrade">
-                        <td class="data-cell">07/06<br><small>(sábado)</small></td>
-                        <td class="horario">17:00</td>
-                        <td><span class="modalidade fmi">FMI</span></td>
-                        <td><span class="chave">G</span></td>
-                        <td class="local">E.M. Bolívar de Andrade</td>
-                        <td><span class="escola-nome">E.E. Jesuzinha Araújo Magalhães<br>São João do Pacuí</span></td>
-                        <td class="vs">X</td>
-                        <td>Vencedor do jogo 1</td>
-                    </tr>
-                    <tr data-day="08/06" data-modalidade="BMII" data-local="Praça de Esportes">
-                        <td class="data-cell">08/06<br><small>(domingo)</small></td>
-                        <td class="horario">10:00</td>
-                        <td><span class="modalidade bmii">BMII</span></td>
-                        <td><span class="chave">U</span></td>
-                        <td class="local">Praça de Esportes</td>
-                        <td>E.E. Sant'Ana<br>Brasília de Minas</td>
-                        <td class="vs">X</td>
-                        <td><span class="escola-nome">E.E. Jesuzinha Araújo Magalhães<br>São João do Pacuí</span></td>
-                    </tr>
-                    <tr data-day="09/06" data-modalidade="BMII" data-local="Praça de Esportes">
-                        <td class="data-cell">09/06<br><small>(segunda)</small></td>
-                        <td class="horario">09:00</td>
-                        <td><span class="modalidade bmii">BMII</span></td>
-                        <td><span class="chave">U</span></td>
-                        <td class="local">Praça de Esportes</td>
-                        <td>Collegium Prisma<br>Montes Claros</td>
-                        <td class="vs">X</td>
-                        <td><span class="escola-nome">E.E. Jesuzinha Araújo Magalhães<br>São João do Pacuí</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -1066,7 +1003,7 @@
     </div>
 
     <script>
-        // Dados dos placares salvos (simulando localStorage)
+        // Dados dos placares salvos
         let placares = {};
         const SENHA_CORRETA = "0309";
 
@@ -1078,18 +1015,18 @@
             { id: 4, data: '06/06', horario: '08:00', modalidade: 'BMII', equipeA: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí', equipeB: 'E.E. Professora Maria Machado - Mirabela' },
             { id: 5, data: '06/06', horario: '10:00', modalidade: 'FFI', equipeA: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí', equipeB: 'E.E. São Sebastião - Coração de Jesus' },
             { id: 6, data: '06/06', horario: '15:00', modalidade: 'FFII', equipeA: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí', equipeB: 'E.E. de Ensino Médio - Grão Mogol' },
-            { id: 7, data: '06/06', horario: '17:00', modalidade: 'FMI', local: 'E.M. Bolívar de Andrade', equipeA: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí', equipeB: 'Perdedor do jogo 1' },
+            { id: 7, data: '06/06', horario: '17:00', modalidade: 'FMI', equipeA: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí', equipeB: 'Perdedor do jogo 1' },
             { id: 8, data: '06/06', horario: '18:00', modalidade: 'FMII', equipeA: 'E.E. Norte Mineira - Capitão Enéas', equipeB: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí (SE PERDER)' },
             { id: 9, data: '07/06', horario: '09:00', modalidade: 'BMII', equipeA: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí', equipeB: 'E.E. Professora Filomena Fialho - São João da Ponte' },
             { id: 10, data: '07/06', horario: '10:00', modalidade: 'FFI', equipeA: 'E.E. Cremilda Passos - Brasília de Minas', equipeB: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí' },
             { id: 11, data: '07/06', horario: '15:00', modalidade: 'FFII', equipeA: 'E.E. de Francisco Dumont - Francisco Dumont', equipeB: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí' },
             { id: 12, data: '07/06', horario: '16:00', modalidade: 'FMII', equipeA: 'E.E. Norte Mineira - Capitão Enéas', equipeB: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí (SE VENCER)' },
-            { id: 13, data: '07/06', horario: '17:00', modalidade: 'FMI', local: 'E.M. Bolívar de Andrade', equipeA: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí', equipeB: 'Vencedor do jogo 1' },
+            { id: 13, data: '07/06', horario: '17:00', modalidade: 'FMI', equipeA: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí', equipeB: 'Vencedor do jogo 1' },
             { id: 14, data: '08/06', horario: '10:00', modalidade: 'BMII', equipeA: 'E.E. Sant\'Ana - Brasília de Minas', equipeB: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí' },
             { id: 15, data: '09/06', horario: '09:00', modalidade: 'BMII', equipeA: 'Collegium Prisma - Montes Claros', equipeB: 'E.E. Jesuzinha Araújo Magalhães - São João do Pacuí' }
         ];
 
-        // Função para abrir modal de placar
+        // Funções para modal de placar
         function openPlacarModal() {
             document.getElementById('placarModal').style.display = 'block';
             document.getElementById('passwordForm').style.display = 'block';
@@ -1099,7 +1036,6 @@
             populateJogosSelect();
         }
 
-        // Função para fechar modal
         function closePlacarModal() {
             document.getElementById('placarModal').style.display = 'none';
             document.getElementById('jogoSelect').value = '';
@@ -1108,7 +1044,6 @@
             document.getElementById('placarB').value = '';
         }
 
-        // Função para verificar senha
         function checkPassword() {
             const senha = document.getElementById('passwordInput').value;
             const errorElement = document.getElementById('passwordError');
@@ -1123,7 +1058,6 @@
             }
         }
 
-        // Função para popular select de jogos
         function populateJogosSelect() {
             const select = document.getElementById('jogoSelect');
             select.innerHTML = '<option value="">Escolha um jogo...</option>';
@@ -1136,7 +1070,6 @@
             });
         }
 
-        // Função para carregar dados do jogo selecionado
         function loadJogoData() {
             const jogoId = document.getElementById('jogoSelect').value;
             const jogoInfo = document.getElementById('jogoInfo');
@@ -1156,7 +1089,6 @@
                 document.getElementById('equipeALabel').textContent = 'Equipe A';
                 document.getElementById('equipeBLabel').textContent = 'Equipe B';
                 
-                // Carregar placar existente se houver
                 if (placares[jogoId]) {
                     document.getElementById('placarA').value = placares[jogoId].placarA;
                     document.getElementById('placarB').value = placares[jogoId].placarB;
@@ -1169,7 +1101,6 @@
             }
         }
 
-        // Função para salvar placar
         function savePlacar() {
             const jogoId = document.getElementById('jogoSelect').value;
             const placarA = document.getElementById('placarA').value;
@@ -1180,22 +1111,16 @@
                 return;
             }
             
-            // Salvar placar
             placares[jogoId] = {
                 placarA: parseInt(placarA),
                 placarB: parseInt(placarB)
             };
             
-            // Atualizar tabela
             updatePlacarDisplay(jogoId, placarA, placarB);
-            
-            // Fechar modal
             closePlacarModal();
-            
             alert('Placar salvo com sucesso!');
         }
 
-        // Função para remover placar
         function removePlacar() {
             const jogoId = document.getElementById('jogoSelect').value;
             
@@ -1207,13 +1132,10 @@
             if (confirm('Tem certeza que deseja remover este placar?')) {
                 delete placares[jogoId];
                 
-                // Resetar display na tabela
                 const row = document.querySelector(`tr[data-jogo="${jogoId}"]`);
                 if (row) {
                     const placarCell = row.querySelector('.placar-cell');
                     placarCell.innerHTML = '<span class="vs">X</span>';
-                    
-                    // Remover classes de resultado
                     row.classList.remove('resultado-vencedor', 'resultado-perdedor');
                 }
                 
@@ -1222,7 +1144,6 @@
             }
         }
 
-        // Função para atualizar display do placar na tabela
         function updatePlacarDisplay(jogoId, placarA, placarB) {
             const row = document.querySelector(`tr[data-jogo="${jogoId}"]`);
             if (!row) return;
@@ -1230,7 +1151,6 @@
             const placarCell = row.querySelector('.placar-cell');
             const jogo = jogosData.find(j => j.id == jogoId);
             
-            // Determinar se Jesuzinha ganhou, perdeu ou empatou
             let resultado = '';
             let cssClass = '';
             
@@ -1251,86 +1171,13 @@
             
             placarCell.innerHTML = `<span class="placar-display ${cssClass}">${placarA} X ${placarB} ${resultado}</span>`;
             
-            // Adicionar classe de resultado à linha inteira
             row.classList.remove('resultado-vencedor', 'resultado-perdedor');
             if (cssClass) {
                 row.classList.add(cssClass);
             }
         }
 
-        // Garantir que não há código visível na página
-        document.addEventListener('DOMContentLoaded', function() {
-            // Limpar qualquer texto indesejado que possa aparecer
-            const body = document.body;
-            const textNodes = [];
-            
-            function getTextNodes(node) {
-                if (node.nodeType === Node.TEXT_NODE) {
-                    textNodes.push(node);
-                } else {
-                    for (let i = 0; i < node.childNodes.length; i++) {
-                        getTextNodes(node.childNodes[i]);
-                    }
-                }
-            }
-            
-            getTextNodes(body);
-            
-            textNodes.forEach(node => {
-                // Lista de textos indesejados para remover
-                const unwantedTexts = [
-                    'function',
-                    'getElementById',
-                    'addEventListener',
-                    'document.',
-                    'const ',
-                    'let ',
-                    'var ',
-                    'Poliesportivo João Bosco">',
-                    'Ginásio Poliesportivo João Bosco">',
-                    '">',
-                    'function applyFilters',
-                    'updateStats',
-                    'clearFilters'
-                ];
-                
-                let nodeText = node.textContent;
-                unwantedTexts.forEach(unwanted => {
-                    if (nodeText.includes(unwanted)) {
-                        node.textContent = '';
-                    }
-                });
-                
-                // Remover fragmentos HTML soltos
-                if (nodeText.trim().endsWith('">') || 
-                    nodeText.trim().startsWith('function ') ||
-                    nodeText.includes('= document.') ||
-                    nodeText.includes('getElementById(')) {
-                    node.textContent = '';
-                }
-            });
-            
-            // Event listeners para filtros em tempo real
-            document.getElementById('filterDay').addEventListener('change', applyFilters);
-            document.getElementById('filterModalidade').addEventListener('change', applyFilters);
-            document.getElementById('filterLocal').addEventListener('change', applyFilters);
-            
-            // Event listener para Enter na senha
-            document.getElementById('passwordInput').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    checkPassword();
-                }
-            });
-            
-            // Fechar modal clicando fora
-            window.addEventListener('click', function(e) {
-                if (e.target === document.getElementById('placarModal')) {
-                    closePlacarModal();
-                }
-            });
-        });
-
-        // Funções de filtro (sem duplicação)
+        // Funções de filtro
         function applyFilters() {
             const filterDay = document.getElementById('filterDay').value;
             const filterModalidade = document.getElementById('filterModalidade').value;
@@ -1433,128 +1280,6 @@
                 }
             });
             
-            document.getElementById('countFFI').textContent = `FFI: ${modalidadeCount.FFI} jogo${modalidadeCount.FFI !== 1 ? 's' : ''}`;
-            document.getElementById('countFFII').textContent = `FFII: ${modalidadeCount.FFII} jogo${modalidadeCount.FFII !== 1 ? 's' : ''}`;
-            document.getElementById('countFMI').textContent = `FMI: ${modalidadeCount.FMI} jogo${modalidadeCount.FMI !== 1 ? 's' : ''}`;
-            document.getElementById('countFMII').textContent = `FMII: ${modalidadeCount.FMII} jogo${modalidadeCount.FMII !== 1 ? 's' : ''}`;
-            document.getElementById('countBMII').textContent = `BMII: ${modalidadeCount.BMII} jogo${modalidadeCount.BMII !== 1 ? 's' : ''}`;
-        }
-    </script>
-</body>
-</html>
-        // Função para aplicar filtros
-        function applyFilters() {
-            const filterDay = document.getElementById('filterDay').value;
-            const filterModalidade = document.getElementById('filterModalidade').value;
-            const filterLocal = document.getElementById('filterLocal').value;
-            
-            const rows = document.querySelectorAll('#gamesTable tr');
-            let visibleCount = 0;
-            
-            rows.forEach(row => {
-                const dayMatch = !filterDay || row.dataset.day === filterDay;
-                const modalidadeMatch = !filterModalidade || row.dataset.modalidade === filterModalidade;
-                const localMatch = !filterLocal || row.dataset.local === filterLocal;
-                
-                if (dayMatch && modalidadeMatch && localMatch) {
-                    row.classList.remove('hidden');
-                    visibleCount++;
-                } else {
-                    row.classList.add('hidden');
-                }
-            });
-            
-            updateResultsInfo(visibleCount, filterDay, filterModalidade, filterLocal);
-            updateStats(visibleCount);
-            
-            // Mostrar/ocultar mensagem de "sem resultados"
-            const noResults = document.getElementById('noResults');
-            if (visibleCount === 0) {
-                noResults.style.display = 'block';
-            } else {
-                noResults.style.display = 'none';
-            }
-        }
-
-        // Função para limpar filtros
-        function clearFilters() {
-            document.getElementById('filterDay').value = '';
-            document.getElementById('filterModalidade').value = '';
-            document.getElementById('filterLocal').value = '';
-            
-            const rows = document.querySelectorAll('#gamesTable tr');
-            rows.forEach(row => {
-                row.classList.remove('hidden');
-            });
-            
-            document.getElementById('resultsInfo').style.display = 'none';
-            document.getElementById('noResults').style.display = 'none';
-            updateStats(15);
-            
-            // Reset day tabs
-            document.querySelectorAll('.day-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.querySelector('.day-tab').classList.add('active');
-        }
-
-        // Função para filtro rápido por dia
-        function quickFilterDay(day) {
-            // Reset outros filtros
-            document.getElementById('filterModalidade').value = '';
-            document.getElementById('filterLocal').value = '';
-            document.getElementById('filterDay').value = day;
-            
-            // Update active tab
-            document.querySelectorAll('.day-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            applyFilters();
-        }
-
-        // Função para atualizar informações dos resultados
-        function updateResultsInfo(count, day, modalidade, local) {
-            const resultsInfo = document.getElementById('resultsInfo');
-            const resultsText = document.getElementById('resultsText');
-            
-            if (day || modalidade || local) {
-                let filterText = 'Filtros aplicados: ';
-                const filters = [];
-                
-                if (day) filters.push(`Dia: ${day}`);
-                if (modalidade) filters.push(`Modalidade: ${modalidade}`);
-                if (local) filters.push(`Local: ${local}`);
-                
-                filterText += filters.join(' | ');
-                filterText += ` • Resultado: ${count} jogo${count !== 1 ? 's' : ''} encontrado${count !== 1 ? 's' : ''}`;
-                
-                resultsText.textContent = filterText;
-                resultsInfo.style.display = 'block';
-            } else {
-                resultsInfo.style.display = 'none';
-            }
-        }
-
-        // Função para atualizar estatísticas
-        function updateStats(visibleCount) {
-            document.getElementById('totalJogos').textContent = visibleCount;
-            
-            // Contar modalidades visíveis
-            const modalidadeCount = {
-                FFI: 0, FFII: 0, FMI: 0, FMII: 0, BMII: 0
-            };
-            
-            const visibleRows = document.querySelectorAll('#gamesTable tr:not(.hidden)');
-            visibleRows.forEach(row => {
-                const modalidade = row.dataset.modalidade;
-                if (modalidadeCount.hasOwnProperty(modalidade)) {
-                    modalidadeCount[modalidade]++;
-                }
-            });
-            
-            // Atualizar contadores
             document.getElementById('countFFI').textContent = `FFI: ${modalidadeCount.FFI} jogo${modalidadeCount.FFI !== 1 ? 's' : ''}`;
             document.getElementById('countFFII').textContent = `FFII: ${modalidadeCount.FFII} jogo${modalidadeCount.FFII !== 1 ? 's' : ''}`;
             document.getElementById('countFMI').textContent = `FMI: ${modalidadeCount.FMI} jogo${modalidadeCount.FMI !== 1 ? 's' : ''}`;
@@ -1564,10 +1289,22 @@
 
         // Inicialização
         document.addEventListener('DOMContentLoaded', function() {
-            // Event listeners para filtros em tempo real
+            // Event listeners
             document.getElementById('filterDay').addEventListener('change', applyFilters);
             document.getElementById('filterModalidade').addEventListener('change', applyFilters);
             document.getElementById('filterLocal').addEventListener('change', applyFilters);
+            
+            document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    checkPassword();
+                }
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === document.getElementById('placarModal')) {
+                    closePlacarModal();
+                }
+            });
         });
     </script>
 </body>
